@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <title>GMT Interview</title>
+        <meta charset="UTF-8">
+        <link href="./style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
+        <script src="./app.js"></script>
+    </head>
+    <body>
+        <div class="title-banner"><h1>Student Success Visualized</h1></div>
+        <div class="card-wrapper">
+            <div class="column-wrapper">
+                <div class="column" style="width: 40%">
+                        <h2>Final Grade</h2>
+                        <p style="margin-top: -14px;">Show average final grade based on...</p>
+                        <ul class="mat-list" id="avg-final-buttons">
+                            <li><button onclick="getGraphAvgFinalInternet()" id="avg-final-internet">Internet access</button></li>
+                            <li><button onclick="getGraphAvgFinalPastFail()" id="avg-final-pastfail">Number of past failures</button></li>
+                            <li><button onclick="getGraphAvgFinalStudyTime()" id="avg-final-studytime">Study time</button></li>
+                            <li><button onclick="getGraphAvgFinalAbsences()" id="avg-final-absences">Absences</button></li>
+                        </ul>
+                </div>
+                <div class="column" style="width: 60%;">
+                        <div class="chart-series-container" id="average-final">
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-wrapper">
+                <h2>Importance of Health</h2>
+            <div id="health-graph"></div>
+        </div>
+        <div class="card-wrapper">
+            <h2>Influence of Travel Time</h2>
+            <div id="travel-graph"></div>
+        </div>
+    </body>
+</html>
